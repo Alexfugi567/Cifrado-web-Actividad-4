@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cifrador clásico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Cifrador clásico</h1>
+
+  <label for="texto">Texto plano:</label><br>
+  <textarea id="texto" rows="4" cols="50" placeholder="Escribe el texto aquí..."></textarea><br><br>
+
+  <label for="algoritmo">Algoritmo:</label>
+  <select id="algoritmo">
+    <option value="cesar">César</option>
+    <option value="vigenere">Vigenère</option>
+    <option value="columnar">Transposición columnar</option>
+    <option value="xor">XOR (hex)</option>
+  </select><br><br>
+
+  <label for="clave">Clave / parámetro:</label>
+  <input id="clave" type="text"
+         placeholder="César: número · Vigenère: letras · Columnar: 3142 · XOR: texto"><br><br>
+  <div id="clave-help" class="help" aria-live="polite"></div>
+  <br>
+
+  <button type="button" onclick="cifrar()">Cifrar</button>
+  <button type="button" onclick="descifrar()">Descifrar</button>
+  <button type="button" onclick="copyResult()">Copiar resultado</button>
+  <button type="button" onclick="clearAll()">Borrar</button>
+  <label class="inline"><input id="xor-hex-toggle" type="checkbox"> Salida hex (XOR)</label>
+
+  <h2>Resultado:</h2>
+  <pre id="resultado" role="status" aria-live="polite"></pre>
+
+  <h3>Ejemplos rápidos</h3>
+  <div id="examples">
+    <button type="button" onclick="loadExample('cesar')">Ejemplo César</button>
+    <button type="button" onclick="loadExample('vigenere')">Ejemplo Vigenère</button>
+    <button type="button" onclick="loadExample('columnar')">Ejemplo Columnar</button>
+    <button type="button" onclick="loadExample('xor')">Ejemplo XOR</button>
+  </div>
+
+  <script src="cipher.js"></script>
+</body>
+</html>
