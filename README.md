@@ -1,4 +1,5 @@
-# Cifrador Clásico - Actividad 4
+
+         # Cifrador Clásico - Actividad 4
 
 ## Descripción
 
@@ -116,3 +117,8 @@ MIT License - Libre para usar, modificar y distribuir.
 
 **Última actualización**: Diciembre 2025  
 **Versión**: 1.0
+
+
+---
+
+**Nota de acceso:** La protección de Vercel ha sido desactivada para permitir acceso público sin login desde cualquier navegador.
